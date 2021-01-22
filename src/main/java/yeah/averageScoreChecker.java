@@ -16,11 +16,11 @@ public class averageScoreChecker {
         double averageScoreMin = 3;
         for (int i = 0; i < students.length; i++) {
             Student student = students[i];
-            if (student.averageScore >= averageScoreMin) {
-                System.out.println(student.firstName);
-                System.out.println(student.secondName);
-                System.out.println(student.averageScore);
-                System.out.println(student.status);
+            if (student.getAverageScore() >= averageScoreMin) {
+                System.out.println(student.getFirstName());
+                System.out.println(student.getSecondName());
+                System.out.println(student.getAverageScore());
+                System.out.println(student.getStatus());
                 System.out.println("-----");
             }
         }

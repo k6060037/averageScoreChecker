@@ -1,10 +1,11 @@
 package yeah;
 
 public class Student {
-    String firstName;
-    String secondName;
-    double averageScore;
-    String status;
+
+    private final String firstName;
+    private final String secondName;
+    private final double averageScore;
+    private String status;
 
     Student(String firstName, String secondName, double averageScore){
         this.firstName = firstName;
@@ -22,5 +23,21 @@ public class Student {
             this.status = "Wasted";
         }
 
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getSecondName() {
+        return secondName;
+    }
+
+    public double getAverageScore() {
+        return averageScore;
+    }
+
+    public String getStatus() {
+        return status;
     }
 }
