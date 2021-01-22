@@ -43,11 +43,8 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "firstName='" + firstName + '\'' +
-                ", secondName='" + secondName + '\'' +
-                ", averageScore=" + averageScore +
-                ", status='" + status + '\'' +
-                '}';
+        return "Студент по имени "
+                + firstName + ", с фамилией " + secondName + " и средним баллом " + averageScore +
+                " баллов, благодаря своим стараниям имеет статус " + status;
     }
 }
