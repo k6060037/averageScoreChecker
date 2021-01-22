@@ -27,17 +27,26 @@ public class averageScoreChecker {
     public static double averageScoreInput(){
         double averageScoreMinInput;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите минимальный проходной балл от 0 до 5 с плавающей запятой");
-        averageScoreMinInput = scanner.nextDouble();
-
+        System.out.println("Введите число с плавающей запятой от 0 до 5 включительно");
         while (true) {
-            if (averageScoreMinInput < 0 || averageScoreMinInput > 5) {
-                System.out.println("Введите снова. Балл не может быть меньше 0 или больше 5!!!");
+            if (scanner.hasNextDouble()) {
                 averageScoreMinInput = scanner.nextDouble();
-            } else {break;}
+                if (averageScoreMinInput >= 0 && averageScoreMinInput <= 5) {
+                    break;
+                } else {
+                    System.out.println("Введенное число за пределами допустимых границ, введите заново");
+                }
+            } else {
+                System.out.println("Необходимо вводить число от 0 до 5 включительно с разделителем-запятой, напр. \"1,1\"");
+                scanner.next();
+                continue;
+            }
         }
+
         return averageScoreMinInput;
     }
+
+
 
     public static void studentWriter(Student student, double averageScoreMin) {
         if (student.getAverageScore() >= averageScoreMin) {
