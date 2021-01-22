@@ -5,6 +5,15 @@ import java.util.Scanner;
 public class averageScoreChecker {
 
     public static void main(String[] args) {
+        Student[] students = studentsArrayInput();
+        double averageScoreMin = averageScoreInput();
+        for (int i = 0; i < students.length; i++) {
+            Student student = students[i];
+            studentWriter(student, averageScoreMin);
+        }
+    }
+
+    public static Student[] studentsArrayInput(){
         Student[] students = {
                 new Student("Mikhail", "Lukashenko", 5),
                 new Student("Pavel", "Ded", 3.8),
@@ -15,13 +24,7 @@ public class averageScoreChecker {
                 new Student("Petr", "Takovoy", 2.4),
                 new Student("Trouble", "Maker", 1.1)
         };
-
-        double averageScoreMin = averageScoreInput();
-
-        for (int i = 0; i < students.length; i++) {
-            Student student = students[i];
-            studentWriter(student, averageScoreMin);
-        }
+        return students;
     }
 
     public static double averageScoreInput(){
