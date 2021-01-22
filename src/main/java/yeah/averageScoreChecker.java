@@ -1,6 +1,8 @@
 package yeah;
 
 public class averageScoreChecker {
+
+
     public static void main(String[] args) {
         Student[] students = {
                 new Student("Mikhail", "Lukashenko", 5),
@@ -17,10 +19,7 @@ public class averageScoreChecker {
         for (int i = 0; i < students.length; i++) {
             Student student = students[i];
             if (student.getAverageScore() >= averageScoreMin) {
-                System.out.println(student.getFirstName());
-                System.out.println(student.getSecondName());
-                System.out.println(student.getAverageScore());
-                System.out.println(student.getStatus());
+                System.out.println(student);
                 System.out.println("-----");
             }
         }

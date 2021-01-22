@@ -40,4 +40,14 @@ public class Student {
     public String getStatus() {
         return status;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstName='" + firstName + '\'' +
+                ", secondName='" + secondName + '\'' +
+                ", averageScore=" + averageScore +
+                ", status='" + status + '\'' +
+                '}';
+    }
 }
