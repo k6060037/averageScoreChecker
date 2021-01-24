@@ -1,18 +1,36 @@
 package yeah;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class averageScoreChecker {
 
     public static void main(String[] args) {
-        Student[] students = studentsArrayInput();
+        List<Student> studentsList = studentsListInput();
+        //Student[] students = studentsArrayInput(); для массива
         double averageScoreMin = averageScoreInput();
-        for (int i = 0; i < students.length; i++) {
-            Student student = students[i];
+        for (int i = 0; i < studentsList.size(); i++) {
+            Student student = studentsList.get(i);
             studentWriter(student, averageScoreMin);
         }
     }
 
+    public static ArrayList studentsListInput(){
+        List<Student> studentsList = new ArrayList<>();
+        studentsList.add(new Student("Mikhail", "Lukashenko", 5));
+        studentsList.add(new Student("Pavel", "Ded", 3.8));
+        studentsList.add(new Student("Ivan", "Collega", 4.1));
+        studentsList.add(new Student("Telegram", "Durov", 4.9));
+        studentsList.add(new Student("Sredniy", "Chelovek", 3.7));
+        studentsList.add(new Student("Ezhik", "Vtumanov", 3));
+        studentsList.add(new Student("Petr", "Takovoy", 2.4));
+        studentsList.add(new Student("Trouble", "Maker", 1.1));
+        return (ArrayList) studentsList;
+    }
+
+
+    /* array students
     public static Student[] studentsArrayInput(){
         Student[] students = {
                 new Student("Mikhail", "Lukashenko", 5),
@@ -26,6 +44,8 @@ public class averageScoreChecker {
         };
         return students;
     }
+    */
+
 
     public static double averageScoreInput(){
         double averageScoreMinInput;
